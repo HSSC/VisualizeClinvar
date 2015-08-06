@@ -10,30 +10,24 @@
     .col-lg-12
       %form.col-lg-10
       .form-group
-        %input#exampleSearchBar.cvform-control{:placeholder => "Enter a gene", :type => "text"}
-        %button.cvbtn Search
-
-  - (@graphs.size/3.0).ceil.times do
-    .row.row-eq-height.graph-row
-      - 3.times do
-        - if @graphs.empty?
-          .col-lg-4
-            .white-mother
-        - else
-          - graph = @graphs.pop
-          = render 'static_graph', graph: graph
-
-  / .col-lg-2
-  /   %h1.teamname Lance Pflieger
-  /   %p.teamtitle Programming, Genetics Domain Expert, D3-developer
-  /   %p.teamextra Anything extra can go here about the individual.
-  /   %a LinkedIn
-  / %form.col-lg-12
-  /   %h1.form Feedback
-  /   .form-group
-  /     %input#exampleInputEmail1.cvform-control{:placeholder => "Enter Email", :type => "email"}
-  /   .col-lg-2
-  /     %button.cvbtn Submit
-  / .col-lg-4.graph
-  /   %h1.important Important Text
-  /   %p.graph Secondary Text
+        %input#exampleSearchBar.hidden.cvform-control{:placeholder => "Enter a gene", :type => "text"}
+        %button.hidden.cvbtn Search
+  .container
+    - @graphs.insert(0, @graphs.delete_at(@graphs.find_index { |g| g.graph == 'phenoJungle' }))
+    / Apologies for the hack to get phenoJungle to use two columns.
+    - (@graphs.size/3.0).ceil.times do
+      .row.row-eq-height.graph-row
+        - 3.times do
+          - if @graphs.empty?
+            .col-md-4.col-xs-4
+              .white-mother
+          - else
+            - graph = @graphs.pop
+            - if graph.graph == 'phenoJungle'
+              .col-md-8.col-xs-8
+                .blue-mother
+                  = render 'static_graph', graph: graph
+            - else
+              .col-md-4.col-xs-4
+                .blue-mother
+                  = render 'static_graph', graph: graph

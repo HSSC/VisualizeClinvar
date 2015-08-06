@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 %html
-.box
-.row
-	= link_to "<- Back to dashboard", root_url
 	.top.text-center
 		%h1.teamname
 			%strong The Team
-		%h2
-			Blerb about the team if you want one. It can go here.
-		.box
+		%p.blurb
+			%i ClinVar is a free variant knowledge-base service provided by the NCBI.
+			%br
+			%i We provide visualizations of the data to support discovery.
 	.container
-		.row
-			.col-md-1
-			.col-md-2.text-right
-				= image_tag "individual_photo.png", :class => "img-responsive"
-			.col-md-3
+		.row.team-row
+			.col-md-1.col-xs-1
+			.col-md-2.text-right.col-xs-2
+				= image_tag "welch.png", :class => "img-responsive"
+			.col-md-3.col-xs-3
 				%h4
 					%strong Brandon Welch
 					%p
 						%br
 						Project Lead, Genetics 
 						%br
-						Domain Expert, Database
-						%br
-						Design
-				%p.small
-					Anything extra can go here about the individual.
-					%br
-					%u LinkedIn Address
-			.col-md-2.text-right
-				= image_tag "individual_photo.png", :class => "img-responsive"
-			.col-md-3
+						Domain Expert, Database Design
+					%a
+						= link_to image_tag("https://static.licdn.com/scds/common/u/img/webpromo/btn_profile_bluetxt_80x15.png"), 'https://www.linkedin.com/in/welchbm', :target => "_blank", :alt => "View Brandon Welch's profile on LinkedIn", :class => "linkedin" 
+			.col-md-2.text-right.col-xs-2
+				= image_tag "heale.png", :class => "img-responsive"
+			.col-md-3.col-xs-3
 				%h4
 					%strong Bret Heale
 					%p
@@ -38,39 +32,8 @@
 						Data-modeling, Genetics
 						%br
 						Domain Expert, D3-developer
-				%p.small
-					Anything extra can go here about the individual.
-					%br
-					%u LinkedIn Address
-			.col-md-1
-		.box
-		.row
-			.col-md-1
-			.col-md-2.center-block
-				= image_tag "individual_photo.png", :class => "img-responsive"
-			.col-md-3
-				%h4
-					%strong Lance Pflieger
-					%p
-						%br
-						Programming, Genetics
-						%br
-						Domain Expert, D3-developer
-				%p.small
-					Anything extra can go here about the individual.
-					%br
-					%u LinkedIn Address
-			.col-md-2.center-block
-				= image_tag "individual_photo.png", :class => "img-responsive"
-			.col-md-3
-				%h4
-					%strong Seth Russell
-					%p
-						%br
-						Software engineer, Layout Design
-						%br
-				%p.small
-					Anything extra can go here about the individual.
-					%br
-					%u LinkedIn Address
-			.col-md-1
+					%a
+						= link_to image_tag("https://static.licdn.com/scds/common/u/img/webpromo/btn_profile_bluetxt_80x15.png"), 'https://www.linkedin.com/pub/bret-heale-phd/26/53b/7ab', :target => "_blank", :alt => "View Bret Heale's profile on LinkedIn", :class => "linkedin" 
+			.col-md-1.col-xs-1
+	.box
+		

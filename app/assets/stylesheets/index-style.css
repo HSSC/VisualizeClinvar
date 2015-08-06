@@ -17,6 +17,23 @@ header {
   display:table;
   float:right;
 }
+.col-lg-12{
+  padding-left: 1px;
+  padding-right: 1px;
+  height: 100%;
+}
+
+.col-md-4 {
+  padding: 0px;
+  width: 31%;
+  margin: 1%;
+}
+
+.col-md-8 {
+  padding: 0px;
+  width: 64%;
+  margin: 1%
+}
 
 .cvform-control{
   display:inline-block;
@@ -97,7 +114,6 @@ button.cvbtn:hover{
   text-decoration:none
   }
 
-
 /*button.dnbtn{
   width: 87px;
   height:  36px;
@@ -136,8 +152,7 @@ a {
   cursor: pointer;
 }
 a:hover {
-  color: #327317;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .d3visualbyte a:hover {
@@ -145,7 +160,7 @@ a:hover {
 }
 
 a:focus {
-  outline: none;
+  text-decoration: none;
 }
 
 .head_links a{
@@ -171,21 +186,32 @@ a:focus {
 }
 
 .head_links a:hover{
-  color: #142E40;
   text-decoration: underline;
 }
 
 .head_links a:focus{
   outline: none;
-}
-
-.box{
-  margin-bottom: 50px;
+  text-decoration: none;
 }
 
 .img-responsive{
   display: block;
   height: auto;
+}
+
+.blurb{
+  padding-bottom: 7%;
+  color: #777;
+  font-size: 2.0rem;
+  font-weight: normal;
+}
+
+.box{
+  margin-bottom: 7%;
+}
+
+.team-row{
+  padding-bottom: 5%;
 }
 
 .top{
@@ -234,7 +260,6 @@ body, p{
   cursor:pointer;
   width: 75%;
   position: relative;
-  margin-top: 30px;
   margin-left: -10px;
 }
 
@@ -257,6 +282,7 @@ h1.teamname{
   font-size: 4.8rem;
   font-weight:bold;
   margin-bottom:1.6rem;
+  padding-bottom: 1%;
 }
 p.land{
   color:#142E40;
@@ -328,6 +354,10 @@ ul.footer{
   width: 100%;
 }
 
+.text a{
+  text-decoration: none;
+}
+
 
 .footer_design {
   position: relative;
@@ -354,12 +384,10 @@ ul.footer{
 }
 /* END Containers */
 
-/* Graph & Charts */
-/*.graph:hover{
-  background-color: #000000;
-  opacity: 0.1;
-}*/
-
+.graph-row {
+  padding-left: 10%;
+  padding-right: 10%;
+}
 
 .text {
   padding: 10px;
