@@ -48,6 +48,7 @@ Rails.application.configure do
   # when problems arise.
   config.log_level = :debug
 
+  config.active_record.dump_schema_after_migration = false
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
