@@ -199,11 +199,30 @@ a:focus {
   height: auto;
 }
 
+.modal-title.unsupported_browser{
+  text-align: center;
+}
+
+.modal-header.unsupported_browser{
+  padding-top: 15px;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+
+.modal-body.unsupported_browser{
+  padding-top: 0px;
+}
+
+
 .blurb{
   padding-bottom: 7%;
   color: #777;
   font-size: 2.0rem;
   font-weight: normal;
+}
+
+.browser-links{
+  padding-top: 20px;
 }
 
 .box{

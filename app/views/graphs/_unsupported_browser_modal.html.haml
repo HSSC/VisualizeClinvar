@@ -1,13 +1,14 @@
 .modal.fade#unsupported_browser_modal{role: 'toggle'}
   .modal-dialog
     .modal-content
-      .modal-header
+      .modal-header.unsupported_browser
         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
           %span{"aria-hidden" => "true"} &times;
-        %h4.modal-title 
-          Unsupported browser detected
-      .modal-body
-        For the best experience, follow either of these links to download Firefox or Google Chrome:
+        %h4.modal-title.unsupported_browser
+          Your browser does not support VisualizeClinvar.org
+      .modal-body.unsupported_browser
+        %h2.modal-title.unsupported_browser
+          Please download a superior browser
         .container-fluid
           .row.browser-links
             .col-md-3
@@ -16,3 +17,5 @@
             .col-md-3.center-block
               = link_to image_tag('chrome.png', width: "100%", height: "100%"), "http://www.google.com/chrome/", target: "_blank"
             .col-md-3
+          .row.h4.small.text-center
+            Click icon to download
