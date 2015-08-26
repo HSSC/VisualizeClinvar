@@ -1,9 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "sprockets/railtie"
-require "rails/test_unit/railtie"
+require 'rails/all'
 require 'dotenv'
 
 # Require the gems listed in Gemfile, including any gems
@@ -12,6 +9,7 @@ Bundler.require(*Rails.groups)
 
 module VisualizeClinvar
   class Application < Rails::Application
+    config.active_record.raise_in_transactional_callbacks = true
     # load all classes in lib directory
     config.autoload_paths << Rails.root.join('lib')
 

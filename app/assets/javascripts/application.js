@@ -20,3 +20,4 @@
 //= require d3pie
 //= require url
 //= require graphs
+//= require browser
